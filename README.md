@@ -5,6 +5,7 @@
 [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/zachinglis/crummy)
 
 Forked to support Rails 5.1+
+
 Crummy is a simple and tasty way to add breadcrumbs to your Rails applications.
 
 ## Install
