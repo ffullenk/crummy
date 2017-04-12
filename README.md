@@ -4,6 +4,7 @@
 [![Build Status](https://secure.travis-ci.org/zachinglis/crummy.png)](http://travis-ci.org/zachinglis/crummy)
 [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/zachinglis/crummy)
 
+Forked to support Rails 5.1+
 Crummy is a simple and tasty way to add breadcrumbs to your Rails applications.
 
 ## Install
@@ -27,7 +28,7 @@ end
 class BusinessController < ApplicationController
   add_crumb("Businesses") { |instance| instance.send :businesses_path }
   add_crumb("Comments", only: "comments") { |instance| instance.send :businesses_comments_path }
-  before_filter :load_comment, only: "show"
+  before_action :load_comment, only: "show"
   add_crumb :comment, only: "show"
 
   # Example for nested routes:
